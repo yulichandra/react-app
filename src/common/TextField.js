@@ -4,12 +4,13 @@ import PropTypes from 'prop-types'
 class TextField extends React.Component{
     constructor(props){
         super(props);
-        const {type,text} = props;
+        const {type, value, label} = props;
         this.state = {
+            label: label,
             type: type,
-            text: text,
+            value: value,
             errorText: "",
-            placeholder: "Test placeholder",
+            placeholder: "",
         }
     }
 
@@ -22,9 +23,10 @@ class TextField extends React.Component{
     render(){
         return (
             <div>
+                <span>{this.state.label}</span>
                 <input 
                     type={this.state.type} 
-                    value={this.state.text}
+                    value={this.state.value}
                     onChange={this.textChanged}
                 />
                 <span>
@@ -36,15 +38,16 @@ class TextField extends React.Component{
 }
 
 TextField.defaultProps = {
-    text: "Hello",
+    label: "Label",
     type: "text",
 }
 
 TextField.propTypes = {
+    label: PropTypes.string,
     type: PropTypes.oneOf([
         "text", 
         ]).isRequired,
-    text: PropTypes.string,
+    value: PropTypes.string,
     errorText: PropTypes.string,
     placeholder: PropTypes.string,
 }
