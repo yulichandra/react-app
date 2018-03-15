@@ -8,7 +8,7 @@ class TextField extends React.Component{
             type: "text",
             text: "",
             error: "",
-            placeholder: "",
+            placeholder: "Test placeholder",
         }
     }
 
@@ -20,7 +20,7 @@ class TextField extends React.Component{
     }
 
     componentWillMount(){
-        this.state.text = this.state.text == "" ? this.state.placeholder : this.state.text;
+        // this.state.text = this.state.text == "" ? this.state.placeholder : this.state.text;
     }
 
     render(){
