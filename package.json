@@ -2,6 +2,12 @@
   "name": "react-app",
   "version": "0.1.0",
   "private": true,
+  "babel": {
+    "presets": [
+      "flow",
+      "react"
+    ]
+  },
   "dependencies": {
     "npm": "^5.7.1",
     "react": "^16.2.0",
@@ -12,6 +18,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "flow": "flow"
+  },
+  "devDependencies": {
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.67.1"
   }
 }
