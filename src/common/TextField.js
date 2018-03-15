@@ -43,7 +43,7 @@ TextField.defaultProps = {
 TextField.propTypes = {
     type: PropTypes.oneOf([
         "text", 
-        ]),
+        ]).isRequired,
     text: PropTypes.string,
     errorText: PropTypes.string,
     placeholder: PropTypes.string,
